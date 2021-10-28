@@ -1,5 +1,9 @@
 # Svelte Side Menu
 
+A small tab pinned to the side of your browser window to add quick links for admin uis
+
+![Slide Menu](./side-menu.png)
+
 ## Demo
 
 https://svelte.dev/repl/d7d81d10ada74b83a574492964c3e5d0?version=3.44.0
