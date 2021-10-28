@@ -1,38 +1,61 @@
-# create-svelte
+# Svelte Side Menu
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte);
+## Demo
 
-## Creating a project
+https://svelte.dev/repl/d7d81d10ada74b83a574492964c3e5d0?version=3.44.0
 
-If you're seeing this, you've probably already done this step. Congrats!
+`npm install @leveluptuts/svelte-side-menu`
 
-```bash
-# create a new project in the current directory
-npm init svelte@next
+```
+<script>
+	import SideMenu from '@leveluptuts/svelte-side-menu'
+</script>
 
-# create a new project in my-app
-npm init svelte@next my-app
+<SideMenu
+	top="15%"
+	theme="dark"
+	links={[
+		{
+			text: 'Admin' // without a path, makes a heading
+		},
+		{
+			text: 'Dashboard',
+			path: '/admin'
+		},
+		{
+			text: 'Custom Service',
+			path: '/admin/service'
+		},
+		{
+			text: 'Sales',
+			path: '/admin/sales'
+		}
+	]}
+/>
+
 ```
 
-> Note: the `@next` is temporary
+## Props
 
-## Developing
+links: array
+nub: string - should be emoji
+top: string - '10px' (default)
+theme: - 'dark' || '' (default)
+slot: - Custom html in the side menu
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+## Sponsors
 
-```bash
-npm run dev
+### Level Up Tutorials
 
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
+https://www.leveluptutorials.com
 
-## Building
+Cutting-edge, focused & high quality video tutorials for web developers and designers
+Syntax
 
-Before creating a production version of your app, install an [adapter](https://kit.svelte.dev/docs#adapters) for your target environment. Then:
+Learn Svelte!
 
-```bash
-npm run build
-```
+### https://syntax.fm/
 
-> You can preview the built app with `npm run preview`, regardless of whether you installed an adapter. This should _not_ be used to serve your app in production.
+A Tasty Treats Podcast for Web Developers. Ft Wes Bos & Scott Tolinski
+
+Thank you!
