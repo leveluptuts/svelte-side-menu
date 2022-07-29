@@ -41,7 +41,7 @@
 		--toy-background-int: var(--toy-bg, white);
 		--toy-header-bg: hsla(0, 0%, 95%, 1);
 		font-family: sans-serif;
-		transition: transform 0.2s var(--ease-in-out-quint, cubic-bezier(0.83, 0, 0.17, 1));
+		transition: transform 0.2s var(--ease_in_out_quint, cubic-bezier(0.83, 0, 0.17, 1));
 		transform: translate3d(100%, 0, 0);
 		position: fixed;
 		top: var(--sm-top);
