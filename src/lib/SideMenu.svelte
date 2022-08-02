@@ -6,15 +6,19 @@
 	export let nub = '🚀';
 	export let links = [
 		{
-			text: 'Admin'
+			text: 'How To Use'
 		},
 		{
-			path: '/admin',
-			text: 'Admin'
+			path: '/please',
+			text: 'Please'
 		},
 		{
 			path: '/link-to',
-			text: 'Link Two'
+			text: 'Add `links` prop'
+		},
+		{
+			path: '/link-to',
+			text: 'to populate the menu'
 		}
 	];
 </script>
@@ -37,14 +41,16 @@
 
 <style lang="scss">
 	.side-menu {
+		--toy-top-position: var(--sm-top, 0);
 		--toy-color-int: var(--toy-color, hsla(0, 0%, 20%, 1));
 		--toy-background-int: var(--toy-bg, white);
 		--toy-header-bg: hsla(0, 0%, 95%, 1);
-		font-family: sans-serif;
+		font-family: var(--toy-font-family, sans-serif);
 		transition: transform 0.2s var(--ease_in_out_quint, cubic-bezier(0.83, 0, 0.17, 1));
 		transform: translate3d(100%, 0, 0);
 		position: fixed;
 		top: var(--sm-top);
+		bottom: 100vh;
 		right: 0;
 		width: var(--toy-width, 300px);
 		z-index: var(--toy-z, 2001);
@@ -73,11 +79,24 @@
 
 	.dark {
 		--toy-color: hsla(0, 0%, 80%, 1);
+		--toy-header-color: hsla(0, 0%, 80%, 1);
 		--toy-background-int: hsla(241, 6%, 15%, 1);
 		--toy-nub-bg: var(--toy-background-int);
 		--toy-highlight: hsla(0, 0%, 25%, 1);
 		--toy-lowlight: hsla(0, 0%, 5%, 1);
 		--toy-header-bg: hsla(0, 0%, 10%, 1);
+	}
+
+	.exp {
+		--toy-color: hsla(0, 0%, 100%, 1);
+		--toy-header-color: #a8fe39;
+		--toy-background-int: hsla(241, 6%, 5%, 1);
+		--toy-nub-bg: var(--toy-background-int);
+		--toy-highlight: hsla(0, 0%, 15%, 1);
+		--toy-lowlight: hsla(0, 0%, 5%, 1);
+		--toy-header-bg: #191324;
+		--toy-font-family: monospace;
+		--level-4: 0px 0px 17px rgb(0 0 0 / 90%) inset, 10px 10px 71px rgb(0 0 0 / 24%) inset;
 	}
 
 	.side-menu-content {
@@ -86,9 +105,11 @@
 		background: var(--toy-background-int);
 		color: var(--toy-color-int);
 		overflow: hidden;
-		max-height: 90vh;
+		max-height: calc(100vh - var(--toy-top-position));
 		overflow-y: scroll;
 		border-radius: 5px 0 0 5px;
+		padding-bottom: 200px;
+		box-sizing: border-box;
 	}
 
 	h4 {
