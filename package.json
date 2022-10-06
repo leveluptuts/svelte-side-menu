@@ -1,21 +1,21 @@
 {
 	"author": "Scott Tolinski | Level Up Tutorials",
 	"devDependencies": {
-		"@sveltejs/adapter-static": "1.0.0-next.41",
-		"@sveltejs/kit": "1.0.0-next.461",
-		"@typescript-eslint/eslint-plugin": "^5.36.1",
-		"@typescript-eslint/parser": "^5.36.1",
-		"eslint": "^8.23.0",
+		"@sveltejs/adapter-static": "1.0.0-next.43",
+		"@sveltejs/kit": "1.0.0-next.505",
+		"@typescript-eslint/eslint-plugin": "^5.38.1",
+		"@typescript-eslint/parser": "^5.38.1",
+		"eslint": "^8.24.0",
 		"eslint-config-prettier": "^8.3.0",
 		"eslint-plugin-svelte3": "^4.0.0",
 		"prettier": "^2.7.1",
 		"prettier-plugin-svelte": "^2.5.1",
-		"svelte": "3.49.0",
-		"svelte-check": "^2.9.0",
+		"svelte": "3.50.1",
+		"svelte-check": "^2.9.1",
 		"svelte-preprocess": "^4.10.1",
 		"tslib": "^2.3.1",
-		"typescript": "^4.8.2",
-		"vite": "3.0.9"
+		"typescript": "^4.8.4",
+		"vite": "3.1.4"
 	},
 	"name": "@leveluptuts/svelte-side-menu",
 	"scripts": {
