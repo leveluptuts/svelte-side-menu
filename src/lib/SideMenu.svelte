@@ -24,7 +24,7 @@
 </script>
 
 <div class={`side-menu ${theme}`} class:active class:right style={`--sm-top: ${top}`}>
-	<div class="nub" on:click={() => (active = !active)}>{nub}</div>
+	<button class="nub" on:click={() => (active = !active)}>{nub}</button>
 	<div class="side-menu-content">
 		<nav>
 			{#each links as link}
@@ -60,6 +60,7 @@
 		}
 
 		.nub {
+			appearance: none;
 			border-bottom: solid 1px var(--toy-lowlight);
 			border-right: solid 1px var(--toy-lowlight);
 			border-top: solid 1px var(--toy-highlight);
