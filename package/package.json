@@ -18,12 +18,11 @@
     "vite": "4.3.9"
   },
   "exports": {
-    ".": "./index.js",
+    ".": { svelte: "./index.js" },
     "./SideMenu.svelte": "./SideMenu.svelte",
     "./package.json": "./package.json"
   },
   "name": "@leveluptuts/svelte-side-menu",
-  "svelte": "./index.js",
   "type": "module",
   "version": "1.0.6"
 }
