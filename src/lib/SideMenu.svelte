@@ -75,6 +75,7 @@
 			right: 100%;
 			top: 20px;
 			background: var(--toy-nub-bg, var(--toy-header-bg));
+			cursor: pointer;
 		}
 	}
 
