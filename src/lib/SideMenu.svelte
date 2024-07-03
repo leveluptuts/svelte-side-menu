@@ -1,4 +1,4 @@
-<script lang="ts">
+<script>
 	export let top = `10px`;
 	export let active = false;
 	export let right = false;
@@ -39,8 +39,9 @@
 	</div>
 </div>
 
-<style lang="scss">
+<style>
 	.side-menu {
+		--toy-highlight: hsla(0, 0%, 100%, 1);
 		--toy-top-position: var(--sm-top, 0);
 		--toy-color-int: var(--toy-color, hsla(0, 0%, 20%, 1));
 		--toy-background-int: var(--toy-bg, white);
@@ -55,15 +56,26 @@
 		width: var(--toy-width, 300px);
 		z-index: var(--toy-z, 2001);
 
+		&.dark {
+			--toy-color: hsla(0, 0%, 80%, 1);
+			--toy-header-color: hsla(0, 0%, 80%, 1);
+			--toy-background-int: hsla(241, 6%, 15%, 1);
+			--toy-nub-bg: var(--toy-background-int);
+			--toy-highlight: hsla(0, 0%, 25%, 1);
+			--toy-lowlight: hsla(0, 0%, 5%, 1);
+			--toy-header-bg: hsla(0, 0%, 10%, 1);
+		}
+
 		&.active {
 			transform: translate3d(0, 0, 0) scale(1.05);
 		}
 
-		.nub {
+		& .nub {
 			appearance: none;
 			border-bottom: solid 1px var(--toy-lowlight);
 			border-right: solid 1px var(--toy-lowlight);
 			border-top: solid 1px var(--toy-highlight);
+			border-left: solid 1px var(--toy-highlight);
 			border-radius: 5px 0 0 5px;
 			box-shadow: var(
 				--level-4,
@@ -77,28 +89,6 @@
 			background: var(--toy-nub-bg, var(--toy-header-bg));
 			cursor: pointer;
 		}
-	}
-
-	.dark {
-		--toy-color: hsla(0, 0%, 80%, 1);
-		--toy-header-color: hsla(0, 0%, 80%, 1);
-		--toy-background-int: hsla(241, 6%, 15%, 1);
-		--toy-nub-bg: var(--toy-background-int);
-		--toy-highlight: hsla(0, 0%, 25%, 1);
-		--toy-lowlight: hsla(0, 0%, 5%, 1);
-		--toy-header-bg: hsla(0, 0%, 10%, 1);
-	}
-
-	.exp {
-		--toy-color: hsla(0, 0%, 100%, 1);
-		--toy-header-color: #a8fe39;
-		--toy-background-int: hsla(241, 6%, 5%, 1);
-		--toy-nub-bg: var(--toy-background-int);
-		--toy-highlight: hsla(0, 0%, 15%, 1);
-		--toy-lowlight: hsla(0, 0%, 5%, 1);
-		--toy-header-bg: #191324;
-		--toy-font-family: monospace;
-		--level-4: 0px 0px 17px rgb(0 0 0 / 90%) inset, 10px 10px 71px rgb(0 0 0 / 24%) inset;
 	}
 
 	.side-menu-content {

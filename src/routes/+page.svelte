@@ -1,4 +1,4 @@
-<script lang="ts">
+<script>
 	import SideMenu from '$lib/SideMenu.svelte';
 </script>
 
@@ -6,7 +6,6 @@
 <p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
 
 <SideMenu nub="🚀" theme="dark" />
-<SideMenu nub="🚀" top="10vh" theme="exp" />
 <SideMenu
 	nub="🚀"
 	top="40vh"
@@ -33,4 +32,3 @@
 		height: 60vh;
 	}
 </style>
-    

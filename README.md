@@ -1,65 +1,58 @@
-# Svelte Side Menu
+# create-svelte
 
-A small tab pinned to the side of your browser window to add quick links for admin uis
+Everything you need to build a Svelte library, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/main/packages/create-svelte).
 
-![Slide Menu](./side-menu.png)
+Read more about creating a library [in the docs](https://kit.svelte.dev/docs/packaging).
 
-## Demo
+## Creating a project
 
-https://svelte.dev/repl/d7d81d10ada74b83a574492964c3e5d0?version=3.44.0
+If you're seeing this, you've probably already done this step. Congrats!
 
-`npm install @leveluptuts/svelte-side-menu`
+```bash
+# create a new project in the current directory
+npm create svelte@latest
 
-```
-<script>
-	import SideMenu from '@leveluptuts/svelte-side-menu'
-</script>
-
-<SideMenu
-	top="15%"
-	theme="dark"
-	links={[
-		{
-			text: 'Admin' // without a path, makes a heading
-		},
-		{
-			text: 'Dashboard',
-			path: '/admin'
-		},
-		{
-			text: 'Custom Service',
-			path: '/admin/service'
-		},
-		{
-			text: 'Sales',
-			path: '/admin/sales'
-		}
-	]}
-/>
-
+# create a new project in my-app
+npm create svelte@latest my-app
 ```
 
-## Props
+## Developing
 
-links: array
-nub: string - should be emoji
-top: string - '10px' (default)
-theme: - 'dark' || '' (default)
-slot: - Custom html in the side menu
+Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
 
-## Sponsors
+```bash
+npm run dev
 
-### Level Up Tutorials
+# or start the server and open the app in a new browser tab
+npm run dev -- --open
+```
 
-https://www.leveluptutorials.com
+Everything inside `src/lib` is part of your library, everything inside `src/routes` can be used as a showcase or preview app.
 
-Cutting-edge, focused & high quality video tutorials for web developers and designers
-Syntax
+## Building
 
-Learn Svelte!
+To build your library:
 
-### https://syntax.fm/
+```bash
+npm run package
+```
 
-A Tasty Treats Podcast for Web Developers. Ft Wes Bos & Scott Tolinski
+To create a production version of your showcase app:
 
-Thank you!
+```bash
+npm run build
+```
+
+You can preview the production build with `npm run preview`.
+
+> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+
+## Publishing
+
+Go into the `package.json` and give your package the desired name through the `"name"` option. Also consider adding a `"license"` field and point it to a `LICENSE` file which you can create from a template (one popular option is the [MIT license](https://opensource.org/license/mit/)).
+
+To publish your library to [npm](https://www.npmjs.com):
+
+```bash
+npm publish
+```
